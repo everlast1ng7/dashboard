@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="checkmark-circle-outline"></ion-icon></span>
+                        <span class="title">Name</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+                        <span class="title">Панель</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="signIn">
+                        <span class="icon"><ion-icon name="log-in-outline"></ion-icon></span>
+                        <span class="title">Вход</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="signIn">
+                        <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                        <span class="title">Месяцы</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+                        <span class="title">Projects</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="analytics-outline"></ion-icon></span>
+                        <span class="title">Other Graphs</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></span>
+                        <span class="title">Настройки</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <!-- <div class="user">
+                    <img src="assets/user2.webp" alt="photo">
+                </div> -->
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <span class="totalAmount numbers">0 р.</span>
+                        <span class="numbers">р.</span>
+                        <div class="cardName">Общая сумма</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="totalProjects numbers">0</div>
+                        <div class="cardName">Количество проектов</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="list-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <span class="totalPercents numbers">0</span>
+                        <span class="numbers">%</span>
+                        <div class="cardName">Общий процент %</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <span class="target numbers">0</span>
+                        <span class="numbers">р.</span>
+                        <div class="cardName">Цель</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="graphBox2">
+                <div class="boxing">
+                    <!-- <canvas id="myChart3"></canvas> -->
+                    <div id="container"></div>
+                </div>
+            </div>
+
+            <div class="graphBox">
+                <div class="boxing">
+                    <canvas id="myChart3"></canvas>
+                    <!-- <canvas id="myChart1"></canvas> -->
+                </div>
+                <!-- <div class="boxing">
+                    <canvas id="myChart2"></canvas>
+                </div> -->
+            </div>
+
+            <!-- <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Проекты</h2>
+                        <a href="#" class="btn">Посмотреть все</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Название</td>
+                                <td>Цена</td>
+                                <td>Статус</td>
+                                <td>Состояние</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>name</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Готово</span></td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status inprogress">В процессе</span></td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Ожидание</span></td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Архив</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div> -->
+        </div>
+    </div>
+
+    <div class="popupSignIn">
+        <span class="xmark">&times;</span>
+        <div class="blueBorder"></div>
+
+        <div class="password">
+            <input type="password" class="input passwordInput" placeholder="Enter password">
+            <button class="btn passwordBtn">Отправить</button>
+        </div>
+
+        <div class="settings">
+            <div class="getTarget">
+                <h2>Цель</h2>
+                <input type="text" placeholder="Введите сумму" class="input inputTarget">
+                <button class="btn addTargetBtn">Добавить цель</button>
+            </div>
+            <div class="settings_graph">
+                <h2>Диаграммы</h2>
+                <input type="text" placeholder="Введите название" class="input inputNameBar">
+                <input type="text" placeholder="Введите значение" class="input inputValueBar">
+                <button class="btn addProjectBtnBar">Добавить проект</button>
+                <input type="text" placeholder="Введите номер" class="input inputIndexBar">
+                <button class="btn removeValueBtnBar">Удалить проект</button>
+                <button class="btn changeValueBtnBar">Изменить значение</button>
+            </div>
+            <!-- <div class="blue_border_vert"></div> -->
+            <div class="wrapper_project_list">
+                <div class="project_list">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
